@@ -254,3 +254,11 @@ button:focus {
     transition: 0.3s;
     color: rgb(44, 199, 57);
 }
+
+Footer {
+    color: rgba(255,255,255,0.6);
+    bottom: 0px;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 180px;
+}
