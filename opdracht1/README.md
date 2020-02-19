@@ -17,3 +17,7 @@ Dit heb ik gedaan door middel van een dropdown, waarin te zien is welke film is 
 
 ## Versie 2
 Ik heb feedback ontvangen in de les. Hieruit is gekomen dat het over het algemeen goed uitzag. Er kunnen wel wat kleine aanpassingen gedaan worden zoals het hartje meer laten opvallen en eventueel in de dropdown lijst een kruisje toevoegen zodat er een extra manier komt om een film te verwijderen uit de lijst.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht1/img/Readme/Feedback.png "Feedback")
+
+Het hartje meer laten opvallen heb ik middels een circel om het hartje heen verbeterd. Om een film via de Watchlist te laten veranderen is mij helaas niet gelukt.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht1/img/Readme/Versie2.png "Versie 2")
