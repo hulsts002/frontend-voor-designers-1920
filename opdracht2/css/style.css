@@ -1,0 +1,228 @@
+html {
+    box-sizing: border-box;
+    /* https://css-tricks.com/box-sizing/ */
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto';
+    background: rgb(251, 251, 251);
+}
+
+/* Column Count */
+body[data-columns="twee"] .imageColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+    padding: 1em;
+}
+
+body[data-columns="drie"] .imageColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+    padding: 1em;
+}
+
+body[data-columns="vier"] .imageColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+    padding: 1em;
+}
+
+/* Dark Mode Colors */
+
+/* Background */
+body[data-darkMode="off"] {
+    background: rgb(251, 251, 251);
+}
+
+body[data-darkMode="on"] {
+    background: rgb(50, 50, 50);
+}
+
+/* 'Settings' color */
+body[data-darkMode="on"] h1 {
+    color: #e527c2;
+    border-bottom: 1.5px solid #e527c2;
+}
+
+/* Settings Panel color */
+body[data-darkMode="on"] .panel {
+    background: rgb(30, 30, 30);
+}
+
+/* Text color*/
+body[data-darkMode="on"] .columns {
+    color: white;
+}
+
+body[data-darkMode="on"] [type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    background: #e527c2;
+}
+
+body[data-darkMode="on"] [type="radio"]:checked + label {
+    color: white;
+}
+
+body[data-darkMode="on"] [type="radio"]:not(:checked) + label {
+    color: white;
+}
+
+body[data-darkMode="on"] .darkMode {
+    color: white;
+}
+
+section {
+    width: 100%;
+}
+
+.panel {
+    background: rgb(230, 230, 230);
+    width: 25%;
+    height: 100%;
+    float: left;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2em;
+    padding-bottom: 7px;
+    color: black;
+    border-bottom: 1.5px solid black;
+}
+
+.columns,
+.darkMode {
+    color: black;
+    margin-bottom: 50px;
+}
+
+/* Columns Radio Buttons */
+.columns label {
+    margin-left: 10px;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #b5b5b5;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* DarkMode Toggle */
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #e527c2;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+/* Images */
+
+.images {
+    width: 70%;
+    float: right;
+    margin: auto;
+}
+
+img {
+    width: 80%;
+    height: auto;
+}
