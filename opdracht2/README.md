@@ -16,6 +16,10 @@ In de tweede versie heb ik gewerkt aan de CSS om alles er wat beter uit te laten
 ![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie2.1.jpg "Versie 2.1")
 ![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie 2.2.png "Versie 2.2")
 
+## Feedback
+Feedback was heel positief. Er waren geen verbeterpunten te bedenken.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Feedback.JPEG "Feedback")
+
 ## Versie 3
 In de laatste versie heb ik een extra functionaliteit toegevoegd in de vorm van een filter. Ook deze is besturen met het toetsenbord.
 Om het gemakkelijker te maken voor de gebruiker, heb ik een sectie toegevoegd met de hotkeys, zodat je gemakkelijk weet welke toetsen je kan gebruiken.
