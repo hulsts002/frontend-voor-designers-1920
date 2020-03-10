@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body data-columns="twee" data-darkMode="off">
+<body data-columns="twee" data-darkMode="off" data-filter="all">
 
     <main>
 
@@ -15,7 +15,7 @@
 
             <div class="panel">
 
-               <h1>Settings</h1>
+                <h1>Settings</h1>
 
                 <div class="columns">
                     <h2>Columns</h2>
@@ -23,36 +23,50 @@
                     <input type="radio" value="drie" name="columns" id="drie"><label for="drie">3</label>
                     <input type="radio" value="vier" name="columns" id="vier"><label for="vier">4</label>
                 </div>
+
                 <div class="darkMode">
                     <h2>Dark Mode</h2>
                     <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox"/>
+                        <input type="checkbox" id="checkbox" />
                         <div class="slider round"></div>
                     </label>
+                </div>
 
 
-                    <!--
-                    <input type="radio" value="off" name="color" id="off" checked><label for="off">Off</label>
-                    <input type="radio" value="on" name="color" id="on"><label for="on">On</label>
--->
+                <div class="filters">
+                    <h2>Filters</h2>
+                    <input type="radio" value="all" name="filters" id="all" checked><label for="all">All</label>
+                    <input type="radio" value="movie" name="filters" id="movie"><label for="movie">Movie</label>
+                    <input type="radio" value="poster" name="filters" id="poster"><label for="poster">Poster</label>
+                </div>
+
+
+                <hr>
+
+                <div class="hotKeys">
+                    <h3>Hotkeys</h3>
+                    <p>Columns: <span>2</span> <span>3</span> <span>4</span></p>
+                    <p>Dark Mode: <span>D</span> <span>L</span></p>
+                    <p>Filters: <span>A</span> <span>M</span> <span>P</span></p>
+                </div>
+
+                <div class="footer">
+                    <p>Designed by Sebastiaan Hulst</p>
                 </div>
 
             </div>
 
             <div class="images">
                 <div class="imageColumns">
-                    <img src="img/MoviePoster8.png" alt="">
-                    <img src="img/MoviePoster9.png" alt="">
-                    <img src="img/MoviePoster10.png" alt="">
-                    <img src="img/MoviePoster8.png" alt="">
-                    <img src="img/MoviePoster10.png" alt="">
-                    <img src="img/MoviePoster9.png" alt="">
+                    <img src="img/MoviePoster6.png" alt="" class="poster">
+                    <img src="img/MoviePoster8.png" alt=""  class="movies">
+                    <img src="img/MoviePoster9.png" alt=""  class="movies">
+                    <img src="img/MoviePoster10.png" alt="" class="poster">
+                    <img src="img/MoviePoster11.png" alt="" class="movies">
                 </div>
             </div>
 
         </section>
-
-
 
     </main>
 

@@ -13,7 +13,7 @@
 
 var columnsContainer = document.querySelector(".columns");
 var darkModeContainer = document.querySelector(".darkMode");
-
+var filterContainer = document.querySelector(".filters");
 
 // Set Columns
 columnsContainer.addEventListener('change', function (event) {
@@ -30,6 +30,14 @@ darkModeContainer.addEventListener('change', function (event) {
     } else {
         document.body.setAttribute("data-darkMode", "off");
     }
+
+});
+
+// Set Filters
+filterContainer.addEventListener('change', function (event) {
+
+    document.body.setAttribute("data-filter", event.target.id);
+
 
 });
 
@@ -61,6 +69,21 @@ document.body.addEventListener('keydown', function (event) {
         var inputOn = document.querySelector("#checkbox");
         inputOn.checked = true;
         inputOn.focus();
+    } else if (event.keyCode == 65) {
+        document.body.setAttribute("data-filter", "all");
+        var inputAll = document.querySelector("#all");
+        inputAll.checked = true;
+        inputAll.focus();
+    } else if (event.keyCode == 77) {
+        document.body.setAttribute("data-filter", "movie");
+        var inputM = document.querySelector("#movie");
+        inputM.checked = true;
+        inputM.focus();
+    } else if (event.keyCode == 80) {
+        document.body.setAttribute("data-filter", "poster");
+        var inputP = document.querySelector("#poster");
+        inputP.checked = true;
+        inputP.focus();
     }
 
 

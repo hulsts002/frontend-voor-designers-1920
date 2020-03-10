@@ -1,34 +1,23 @@
-# Frontend voor Designers - opdracht 2: Een interactie uitwerken voor verschillende gebruikers input
+# Procesverslag
 
-Werk een functionaliteit uit die je kunt bedienen met 'click' en nog een user interactie, zoals het toetsenbord, tab, dubbel click, swipe, long press, <del>force touch</del>, of iets anders ... Werk je ontwerp uit in HTML, CSS en Javascript om te kunnen testen in een [browser](https://en.m.wikipedia.org/wiki/List_of_web_browsers).
+Gekozen Use Case: Settings panel op een foto-overzichtpagina: Instellingen zijn bijvoorbeeld de font-grootte, night vision en het aantal kolommen die naast elkaar worden getoond. Het bedienen van de instellingen moet met de muis en de sneltoetsen op het toetsenbord.
 
+## Idee
+Ik kwam met het idee om aan de linkerkant een panel te hebben met daarin verschillende settings die je kan toepassen. Aan de rechterkant heb ik dan de foto's.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Schetsen.jpeg "Schets")
 
-## Werkwijze
-Bedenk een functionaliteit die je op meerdere manieren kunt bedienen. Schets eerst hoe de functionaliteit er uit komt te zien. Maak daarna een breakdown-schets van hoe de verschillende elementen technisch moeten gaan werken...
+## Versie 1
+Ik heb de schets gelijk uitgewerkt. Ik heb twee functionaliteiten toegevoegd: het aantal kolommen veranderen en een dark mode. Qua CSS heb ik bijna niks veranderd, dus het ziet er nog niet geweldig uit. Ook heb ik toegevoegd dat deze functionaliteiten kunnen worden bestuurd met het toetsenbord. Als je het aantal kolommen bijvoorbeeld wilt veranderden, dan kan je de nummers 2, 3 en 4 gebruiken.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie1.1.png "Versie 1.1")
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie1.2.png "Versie 1.2")
 
-Codeer de functionaliteit in HTML, CSS en JavaScript en test verschillende versies van je ontwerp in een browser.
+## Versie 2
+In de tweede versie heb ik gewerkt aan de CSS om alles er wat beter uit te laten zien.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie2.1.jpg "Versie 2.1")
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie2.2.png "Versie 2.2")
 
-## Planning
-1. Les 3: Briefing opdracht 2 en beginnen met schetsen en coderen
-2. Les 4: Eerste versie testen
-3. Les 5: Oplevering en beoordeling
+## Versie 3
+In de laatste versie heb ik een extra functionaliteit toegevoegd in de vorm van een filter. Ook deze is besturen met het toetsenbord.
+Om het gemakkelijker te maken voor de gebruiker, heb ik een sectie toegevoegd met de hotkeys, zodat je gemakkelijk weet welke toetsen je kan gebruiken.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie3.1.jpg "Versie 3.1")
 
-
-## Voorbeeld functionaliteit die je kunt maken
-- Carousel met vakantiefoto's: Een carousel met meerdere foto's van een vakantie, die je kan bedienen met een button en met de pijltjes op het toetsenbord.
-- Portfolio website met meerdere projecten en een biografie. Als je naar 'beneden' scrollt vult de betreffende section zich met informatie. Als je op tab klikt ga je ook naar de volgende section. Of als je 'volgende' roept ...
-- Settings panel op een foto-overzichtpagina: Instellingen zijn bijvoorbeeld de font-grootte, night vision en het aantal kolommen die naast elkaar worden getoond. Het bedienen van de instellingen moet met de muis en de sneltoetsen op het toetsenbord.
-- Je mag ook een eigen idee uitwerken. Kom dan eerst even overleggen.
-
-
-## Criteria
-
-1. In de demo maak je gebruik van verschillende [User Interface events](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent).
-2.In de demo dien je rekening te houden met de interface design principles 04, 08 & 09 van [Principles of User Interface Design](http://bokardo.com/principles-of-user-interface-design/).
-3. Je ontwerp is aantoonbaar getest en verbeterd. Verslaglegging en resultaat publiceren op Github. <br>Voeg ook je breakdown-schets toe, en beschrijf je eerste idee en technische opzet en hoe het uiteindelijk is geworden.
-
-
-## Resources
-- Bekijk hier de lijst [User Interface Events](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent) die je in javascript kunt gebruiken.
-- Als je iets wil doen met scrollen, dan kun je het event 'scroll' gebruiken. Misschien kun je ook iets doen met de [Intersection observer](https://pawelgrzybek.com/the-intersection-observer-api-explained/)
-- Als een onderdeel van je pagina in beeld moet verschijnen na een click, dan kun je iets doen met [scrollIntoView](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView).
