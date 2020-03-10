@@ -8,13 +8,13 @@ Ik kwam met het idee om aan de linkerkant een panel te hebben met daarin verschi
 
 ## Versie 1
 Ik heb de schets gelijk uitgewerkt. Ik heb twee functionaliteiten toegevoegd: het aantal kolommen veranderen en een dark mode. Qua CSS heb ik bijna niks veranderd, dus het ziet er nog niet geweldig uit. Ook heb ik toegevoegd dat deze functionaliteiten kunnen worden bestuurd met het toetsenbord. Als je het aantal kolommen bijvoorbeeld wilt veranderden, dan kan je de nummers 2, 3 en 4 gebruiken.
-![alt text]("https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie 1.1.png" "Versie 1.1")
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie1.1.png "Versie 1.1")
 ![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie1.2.png "Versie 1.2")
 
 ## Versie 2
 In de tweede versie heb ik gewerkt aan de CSS om alles er wat beter uit te laten zien.
 ![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie2.1.jpg "Versie 2.1")
-![alt text]("https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie 2.2.png" "Versie 2.2")
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht2/img/Readme/Versie2.2.png "Versie 2.2")
 
 ## Feedback
 Feedback was heel positief. Er waren geen verbeterpunten te bedenken.
