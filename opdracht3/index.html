@@ -3,15 +3,36 @@
 <head>
     <title>Frontend voor Designer - Opdracht 3</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body data-columns="drie" data-darkMode="off">
+<body data-columns="drie" data-darkMode="off" data-filters="all">
 
-<!--
-    <div>
-        <button>Show Movies</button>
+    <h1>MoviesList</h1>
+
+    <div class="filtersAndMore">
+        <div class="darkMode">
+            <i class="fa fa-adjust"></i>
+            <p>Dark <br>
+                Mode</p>
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+        </div>
+
+        <div class="filters">
+            <h2>Genre</h2>
+            <input type="radio" value="all" name="filters" id="all" checked><label for="all">All</label>
+            <input type="radio" value="horror" name="filters" id="horror"><label for="horror">Horror</label>
+            <input type="radio" value="crime" name="filters" id="crime"><label for="crime">Crime</label>
+            <input type="radio" value="drama" name="filters" id="drama"><label for="drama">Drama</label>
+            <input type="radio" value="action" name="filters" id="action"><label for="action">Action</label>
+        </div>
+
     </div>
--->
+
+    <hr>
 
     <section>
 
