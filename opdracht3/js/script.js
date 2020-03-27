@@ -9,8 +9,8 @@ var button = document.querySelector("button");
 
 
 /* Doen als de pagina geladen is */
-window.onload = function() {
-   let requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
+window.onload = function () {
+    let requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json';
     let request = new XMLHttpRequest();
     request.open('GET', requestURL);
 
@@ -50,7 +50,7 @@ function vulFilmMetInfo(deFilm) {
 
 
     /* de info van alleen die film ophalen */
-    let requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies'+volgNummer+'.json';
+    let requestURL = 'https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies' + volgNummer + '.json';
     let request = new XMLHttpRequest();
     request.open('GET', requestURL);
 
@@ -62,7 +62,7 @@ function vulFilmMetInfo(deFilm) {
         const filmInfo = request.response;
 
         /* als de film de class "details" heeft */
-        if(deFilm.classList.contains("details")){
+        if (deFilm.classList.contains("details")) {
             /* de class "details" verwijderen */
             deFilm.classList.remove("details");
             /* de film vullen met de basics */
@@ -83,40 +83,41 @@ function vulFilmMetInfo(deFilm) {
 function vulMetBasics(myArticle, filmInfo) {
     let Titel = document.createElement('h2');
     let smallPlot = document.createElement('p');
-    let ReleaseDate = document.createElement('p');
-    let Genre = document.createElement('p');
+    let ReleaseDateGenre = document.createElement('p');
+    //    let Genre = document.createElement('p');
     let image = document.createElement('img');
 
     Titel.textContent = filmInfo.title;
     smallPlot.textContent = filmInfo.simple_plot;
-    ReleaseDate.textContent = 'Release Date: ' + filmInfo.release_date;
-    Genre.textContent = 'Genre: ' + filmInfo.genres;
     image.src = filmInfo.cover;
+    var date = new Date(filmInfo.release_date);
+    ReleaseDateGenre.textContent = date.getFullYear() + " | " + filmInfo.genres.join(' / ');
+    //    Genre.textContent = 'Genre: ' + filmInfo.genres;
 
     myArticle.setAttribute("id", 'Article' + filmInfo.id);
     smallPlot.setAttribute("id", 'sP' + filmInfo.id);
-    ReleaseDate.setAttribute("id", 'rD' + filmInfo.id);
-    Genre.setAttribute("id", 'g' + filmInfo.id);
+    ReleaseDateGenre.setAttribute("id", 'rDg' + filmInfo.id);
+    //    Genre.setAttribute("id", 'g' + filmInfo.id);
 
     /* article leeg maken */
     myArticle.textContent = "";
     /* article vullen */
     myArticle.appendChild(Titel);
     myArticle.appendChild(smallPlot);
-    myArticle.appendChild(ReleaseDate);
-    myArticle.appendChild(Genre);
     myArticle.appendChild(image);
+    myArticle.appendChild(ReleaseDateGenre);
+    //    myArticle.appendChild(Genre);
 }
 
 
 /* een film met details vullen */
-function vulMetDetails(myArticle, filmInfo){
+function vulMetDetails(myArticle, filmInfo) {
 
     let title = document.createElement('h2');
     let plot = document.createElement('p');
+
     title.textContent = filmInfo.title;
     plot.textContent = filmInfo.plot;
-
 
     /* article leeg maken */
     myArticle.textContent = "";
@@ -147,5 +148,25 @@ filterContainer.addEventListener('change', function (event) {
 
     document.body.setAttribute("data-filter", event.target.id);
 
+});
+
+
+// Set Columns and Dark Mode with Keyboard Input
+document.body.addEventListener('keydown', function (event) {
+
+    if (event.keyCode == 76) {
+        document.body.setAttribute("data-darkMode", "off");
+        var inputOff = document.querySelector("#checkbox");
+        inputOff.checked = false;
+        inputOff.focus();
+    } else if (event.keyCode == 68) {
+        document.body.setAttribute("data-darkMode", "on");
+        var inputOn = document.querySelector("#checkbox");
+        inputOn.checked = true;
+        inputOn.focus();
+    }
+
 
 });
+
+

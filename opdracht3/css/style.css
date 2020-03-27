@@ -27,7 +27,7 @@ body[data-darkMode="on"] i {
 }
 
 body[data-darkMode="on"] .darkMode,
-body[data-darkMode="on"] .filters{
+body[data-darkMode="on"] .filters {
     background: rgb(20, 20, 20);
 }
 
@@ -92,7 +92,7 @@ h1 {
     border-radius: 10px;
     display: inline-block;
     color: white;
-    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.6);
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.6);
 }
 
 .filters {
@@ -104,7 +104,7 @@ h1 {
     display: inline-block;
     margin-left: 20px;
     color: white;
-    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.6);
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.6);
 }
 
 .filters h2 {
@@ -137,7 +137,7 @@ h1 {
 }
 
 .slider {
-    background-color: rgb(220,220,220);
+    background-color: rgb(220, 220, 220);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -177,7 +177,7 @@ input:checked + .slider:before {
 
 
 /* Columns Radio Buttons */
-label {
+[type="radio"] label {
     margin-left: 10px;
 }
 
@@ -215,7 +215,7 @@ label {
     content: '';
     width: 10px;
     height: 10px;
-    background: rgb(150,150,150);
+    background: rgb(150, 150, 150);
     position: absolute;
     top: 5px;
     left: 5px;
@@ -255,7 +255,11 @@ article {
     padding: 10px;
     transition: 0.3s ease-out;
     height: 440px;
-    overflow: auto;
+    overflow-y: scroll;
+}
+
+article::-webkit-scrollbar {
+    display: none;
 }
 
 article:hover {
@@ -283,6 +287,20 @@ article p {
 }
 
 article img {
-    width: 35%;
+    width: 40%;
     height: auto;
+    display:block;
+    margin: auto;
+}
+
+#rDg1,
+#rDg2,
+#rDg3,
+#rDg4,
+#rDg5,
+#rDg6 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+
 }
