@@ -27,7 +27,8 @@ body[data-darkMode="on"] i {
 }
 
 body[data-darkMode="on"] .darkMode,
-body[data-darkMode="on"] .filters {
+body[data-darkMode="on"] .filters,
+body[data-darkMode="on"] .columns {
     background: rgb(20, 20, 20);
 }
 
@@ -36,6 +37,10 @@ body[data-darkMode="on"] [type="radio"]:not(:checked) + label:after {
     background: #0396d4;
 }
 
+body[data-darkMode="on"] .hotKeys {
+    background: rgb(20, 20, 20);
+    color: white;
+}
 
 body[data-darkMode="on"] article {
     background-color: #1a1a1a;
@@ -47,28 +52,89 @@ body[data-darkMode="on"] article:hover {
 
 /* --- Filters --- */
 body[data-filter="all"] .horror,
-body[data-filter="all"] .crime {
+body[data-filter="all"] .crime,
+body[data-filter="all"] .drama,
+body[data-filter="all"] .action {
     display: block;
 }
 
-body[data-filter="horror"] .crime {
+body[data-filter="horror"] .crime,
+body[data-filter="horror"] .drama,
+body[data-filter="horror"] .action {
     display: none;
 }
 
-body[data-filter="crime"] .horror {
+body[data-filter="crime"] .horror,
+body[data-filter="crime"] .drama,
+body[data-filter="crime"] .action {
+    display: none;
+}
+
+body[data-filter="drama"] .horror,
+body[data-filter="drama"] .crime,
+body[data-filter="drama"] .action {
+    display: none;
+}
+
+body[data-filter="action"] .horror,
+body[data-filter="action"] .crime,
+body[data-filter="action"] .drama {
     display: none;
 }
 
 /* --- Columns --- */
 
-body[data-columns="drie"] section {
+section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 1rem;
 }
 
+@media screen and (min-width: 40em) {
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
 
-/* Naam */
+    article img {
+        width: 170px;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 65em) {
+    body[data-columns="twee"] section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    body[data-columns="twee"] article img {
+        width: 170px;
+        height: auto;
+    }
+
+    body[data-columns="drie"] section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    body[data-columns="vier"] section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    body[data-columns="vier"] article img {
+        width: 140px;
+        height: auto;
+    }
+}
+
+
+/* Naam Website */
 h1 {
     color: #0396d4;
     text-align: center;
@@ -77,11 +143,14 @@ h1 {
 
 /* --- DarkMode, Filters, etc. --- */
 .filtersAndMore {
-    height: 125px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    border-bottom: 1.5px solid black;
+    padding-bottom: 15px;
 }
+
 
 .darkMode {
     background: #0396d4;
@@ -91,6 +160,21 @@ h1 {
     text-align: center;
     border-radius: 10px;
     display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+    color: white;
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.6);
+}
+
+.columns {
+    background: #0396d4;
+    padding: 10px;
+    width: 150px;
+    height: 85px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
     color: white;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.6);
 }
@@ -102,13 +186,14 @@ h1 {
     height: 85px;
     border-radius: 10px;
     display: inline-block;
-    margin-left: 20px;
+    margin-top: 10px;
     color: white;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.6);
 }
 
-.filters h2 {
-    margin: 0 0 10px 0;
+.filters h2,
+.columns h2 {
+    margin: 0 0 20px 0;
 }
 
 .filters p {
@@ -176,11 +261,7 @@ input:checked + .slider:before {
 }
 
 
-/* Columns Radio Buttons */
-[type="radio"] label {
-    margin-left: 10px;
-}
-
+/* Columns and Genres Radio Buttons */
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;
@@ -191,6 +272,8 @@ input:checked + .slider:before {
 [type="radio"]:not(:checked) + label {
     position: relative;
     padding-left: 24px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
@@ -236,12 +319,48 @@ input:checked + .slider:before {
     transform: scale(1);
 }
 
-
-hr {
-    border: 2px solid rgb(20, 20, 20);
-    color: rgb(20, 20, 20);
-    border-radius: 5px;
+[type="radio"]:disabled + label {
+    opacity: 0.5;
+    pointer-events: none;
 }
+
+.information i {
+    font-size: 40px;
+    color: #0396d4;
+}
+
+.information {
+    margin-left: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+
+/* info text pop up from: https://www.w3schools.com/css/css_tooltip.asp */
+.hotKeys {
+    visibility: hidden;
+    width: 130px;
+    background-color: #0396d4;
+    color: #fff;
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    top: -5px;
+    left: 135%;
+    position: absolute;
+    z-index: 1;
+
+    transition: opacity 0.2s ease-in;
+    opacity: 0;
+}
+
+.information:hover .hotKeys {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 /* --- Section met de films --- */
 
@@ -253,7 +372,7 @@ article {
     background: #d5d9e7;
     border-radius: 10px;
     padding: 10px;
-    transition: 0.3s ease-out;
+    transition: 0.2s ease-out;
     height: 440px;
     overflow-y: scroll;
 }
@@ -271,6 +390,7 @@ article:hover {
 article h2 {
     color: #0396d4;
 
+
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     -ms-transform: translateZ(0);
@@ -287,9 +407,9 @@ article p {
 }
 
 article img {
-    width: 40%;
+    width: 150px;
     height: auto;
-    display:block;
+    display: block;
     margin: auto;
 }
 
@@ -299,7 +419,6 @@ article img {
 #rDg4,
 #rDg5,
 #rDg6 {
-    text-align: center;
     font-size: 18px;
     font-weight: 500;
 

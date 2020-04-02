@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body data-columns="drie" data-darkMode="off" data-filters="all">
+<body data-columns="drie" data-darkMode="off" data-filter="all">
 
     <h1>MoviesList</h1>
 
@@ -21,6 +21,13 @@
             </label>
         </div>
 
+        <div class="columns">
+            <h2>Columns</h2>
+            <input type="radio" value="twee" name="columns" id="twee"><label for="twee">2</label>
+            <input type="radio" value="drie" name="columns" id="drie" checked><label for="drie">3</label>
+            <input type="radio" value="vier" name="columns" id="vier"><label for="vier">4</label>
+        </div>
+
         <div class="filters">
             <h2>Genre</h2>
             <input type="radio" value="all" name="filters" id="all" checked><label for="all">All</label>
@@ -30,10 +37,18 @@
             <input type="radio" value="action" name="filters" id="action"><label for="action">Action</label>
         </div>
 
+
+        <div class="information">
+            <i class="fa fa-info-circle"></i>
+            <div class="hotKeys">
+                <h3>Hotkeys</h3>
+                <p>Columns: 2, 3, 4</p>
+                <p>Dark Mode: D, L</p>
+            </div>
+        </div>
+
+
     </div>
-
-    <hr>
-
     <section>
 
     </section>
