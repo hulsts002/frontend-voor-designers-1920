@@ -51,35 +51,14 @@ body[data-darkMode="on"] article:hover {
 }
 
 /* --- Filters --- */
-body[data-filter="all"] .horror,
-body[data-filter="all"] .crime,
-body[data-filter="all"] .drama,
-body[data-filter="all"] .action {
-    display: block;
-}
 
-body[data-filter="horror"] .crime,
-body[data-filter="horror"] .drama,
-body[data-filter="horror"] .action {
-    display: none;
-}
-
-body[data-filter="crime"] .horror,
-body[data-filter="crime"] .drama,
-body[data-filter="crime"] .action {
-    display: none;
-}
-
-body[data-filter="drama"] .horror,
-body[data-filter="drama"] .crime,
-body[data-filter="drama"] .action {
-    display: none;
-}
-
-body[data-filter="action"] .horror,
-body[data-filter="action"] .crime,
-body[data-filter="action"] .drama {
-    display: none;
+body[data-filter="horror"] article:not(.horror),
+body[data-filter="crime"] article:not(.crime),
+body[data-filter="drama"] article:not(.drama),
+body[data-filter="action"] article:not(.action),
+body[data-filter="thriller"] article:not(.thriller),
+body[data-filter="adventure"] article:not(.adventure) {
+    display:none;
 }
 
 /* --- Columns --- */
@@ -98,7 +77,7 @@ section {
     }
 
     article img {
-        width: 170px;
+        width: 270px;
         height: auto;
     }
 }
@@ -111,7 +90,7 @@ section {
     }
 
     body[data-columns="twee"] article img {
-        width: 170px;
+        width: 270px;
         height: auto;
     }
 
@@ -128,7 +107,7 @@ section {
     }
 
     body[data-columns="vier"] article img {
-        width: 140px;
+        width: 12em;
         height: auto;
     }
 }
@@ -182,13 +161,19 @@ h1 {
 .filters {
     background: #0396d4;
     padding: 10px;
-    width: 440px;
-    height: 85px;
+    width: 600px;
+    height: 100px;
     border-radius: 10px;
     display: inline-block;
     margin-top: 10px;
     color: white;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 43em) {
+    .filters {
+        height: 85px;
+    }
 }
 
 .filters h2,
@@ -222,7 +207,7 @@ h1 {
 }
 
 .slider {
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(200, 200, 200);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -373,7 +358,7 @@ article {
     border-radius: 10px;
     padding: 10px;
     transition: 0.2s ease-out;
-    height: 440px;
+    height: 600px;
     overflow-y: scroll;
 }
 
@@ -407,7 +392,7 @@ article p {
 }
 
 article img {
-    width: 150px;
+    width: 250px;
     height: auto;
     display: block;
     margin: auto;

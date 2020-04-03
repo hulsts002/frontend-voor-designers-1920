@@ -7,6 +7,9 @@ Hoe kan ik ervoor zorgen dat ik op Genre kan filteren?
 In opdracht twee heb ik de films een class geven en zo in css op display none kunnen zetten.
 Maar nu weet ik niet hoe ik onderscheid kan maken tussen de films en hun genres.
 
+## Vraag 03-04-2020
+Kleine vraag. Wanneer je de browser resized, dan heb ik het aantal kolommen vast gezet, omdat het er lelijk uit zoe zien als je 4 kolommen hebt op een heel smal scherm. Ik heb de radio buttons disabled en je kan er niet meer op klikken, maar de radio buttons zijn nog steeds veranderbaar met het toetsenbord. Hoe kan ik dit ook uitschakelen?
+
 # Procesverslag
 
 Voor deze opdracht ga je een functionaliteit ontwerpen met externe data. De data is JSON die met een REST API van een externe bron wordt ingeladen met Javascript. Als de data geladen is moeten gebruikers je ontwerp op verschillende manieren kunnen bedienen. Verschillende states zijn vormgeven en worden op het juiste moment getoond.
@@ -19,7 +22,7 @@ Wanneer je hovered over een film, krijg je meer info te zien.
 ![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht3/img/Readme/Schets.jpeg "Schets")
 
 ## Versie 1
-Toen ik ben gaan werken met json, ben ik eigenlijk voor een ander design gegaan. Ik heb de films in 3 kolommen gezet met was basic informatie.
+Toen ik ben gaan werken met json, ben ik eigenlijk voor een ander design gegaan. Ik heb de films in 3 kolommen gezet met wat basic informatie.
 ![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht3/img/Readme/Versie1.1.png "Versie 1")
 
 ## Versie 2

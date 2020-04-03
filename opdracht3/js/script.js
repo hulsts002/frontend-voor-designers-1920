@@ -31,6 +31,12 @@ function showMovies(jsonObj) {
 
         vulMetBasics(myArticle, movie[i]);
 
+        for (t = 0; t < movie[i].genres.length; t++) {
+            let genre = movie[i].genres[t];
+            genre = genre.toLowerCase(); // om de hoofdletter weg te halen
+            myArticle.classList.add(genre);
+        }
+
         /* bij het aanmaken van een film gelijk ook een eventListener toevoegen */
         myArticle.addEventListener('click', function (event) {
             vulFilmMetInfo(this);
@@ -87,23 +93,6 @@ function vulMetBasics(myArticle, filmInfo) {
     var date = new Date(filmInfo.release_date);
     ReleaseDateGenre.textContent = date.getFullYear() + " | " + filmInfo.genres.join(' / ');
 
-
-    //class toevoegen voor filters?
-    if (filmInfo.genres.includes("Horror")) {
-        myArticle.setAttribute("class", 'horror');
-        console.log("horror");
-    } else if (filmInfo.genres.includes("Crime")) {
-        myArticle.setAttribute("class", 'crime');
-        console.log("crime");
-    } else if (filmInfo.genres.includes("Drama")) {
-        myArticle.setAttribute("class", 'drama');
-        console.log("drama");
-    } else if (filmInfo.genres.includes("Action")) {
-        myArticle.setAttribute("class", 'action');
-        console.log("action");
-    }
-
-
     myArticle.setAttribute("id", 'Article' + filmInfo.id);
     smallPlot.setAttribute("id", 'sP' + filmInfo.id);
     ReleaseDateGenre.setAttribute("id", 'rDg' + filmInfo.id);
@@ -112,9 +101,9 @@ function vulMetBasics(myArticle, filmInfo) {
     myArticle.textContent = "";
     /* article vullen */
     myArticle.appendChild(Titel);
+    myArticle.appendChild(image);
     myArticle.appendChild(ReleaseDateGenre);
     myArticle.appendChild(smallPlot);
-    myArticle.appendChild(image);
 }
 
 
@@ -164,7 +153,6 @@ filterContainer.addEventListener('change', function (event) {
 
 });
 
-
 // Set Columns and Dark Mode with Keyboard Input
 document.body.addEventListener('keydown', function (event) {
     if (event.keyCode == 76) {
@@ -188,8 +176,9 @@ document.body.addEventListener('keydown', function (event) {
         var input4 = document.querySelector("#vier");
         input4.checked = true;
     }
-});
 
+
+});
 
 /* On resize of window, you can't change the amount of columns */
 var w = window.innerWidth;
