@@ -18,7 +18,11 @@ body {
 
 /* Background */
 body[data-darkMode="on"] {
-    background-color: #222323;
+    background-color: rgb(40, 40, 40);
+}
+
+body[data-darkMode="on"] h1 {
+    filter: drop-shadow(10px 5px 4px rgba(0, 0, 0, 0.3));
 }
 
 body[data-darkMode="on"] p,
@@ -58,7 +62,7 @@ body[data-filter="drama"] article:not(.drama),
 body[data-filter="action"] article:not(.action),
 body[data-filter="thriller"] article:not(.thriller),
 body[data-filter="adventure"] article:not(.adventure) {
-    display:none;
+    display: none;
 }
 
 /* --- Columns --- */
@@ -116,9 +120,34 @@ section {
 /* Naam Website */
 h1 {
     color: #0396d4;
+    font-family: 'Sen', cursive;
+    letter-spacing: .05em;
     text-align: center;
     font-size: 4em;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.7));
+    overflow: hidden;
 }
+
+/* little animation from: https://codepen.io/geoffgraham/pen/YOwWeb?editors=0100 */
+h1::before {
+    content: '';
+    background-image: url('https://cdn.icon-icons.com/icons2/1686/PNG/512/12008thumbsup_111446.png');
+    background-position: 0 30%;
+    background-repeat: no-repeat;
+    left: 0;
+    position: absolute;
+    bottom: -14vh;
+    width: 100vw;
+    background-size: 60px;
+    height: 200px;
+    transform: translateX(1550px);
+    transition: transform .3s;
+}
+
+h1:hover::before {
+    transform: translateX(800px);
+}
+
 
 /* --- DarkMode, Filters, etc. --- */
 .filtersAndMore {
@@ -207,7 +236,7 @@ h1 {
 }
 
 .slider {
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(210, 210, 210);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -406,5 +435,4 @@ article img {
 #rDg6 {
     font-size: 18px;
     font-weight: 500;
-
 }

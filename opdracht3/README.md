@@ -1,15 +1,3 @@
-## Vraag 19-03-2020
-Hoe kan ik, als ik op een article klik, andere informatie het beste laten tonen?
-Dus ipv van de info die je ziet als je de pagina laad, dat je ze vervangt met plot van de film (specifiek de article waar je op hebt geklikt).
-
-## Vraag 26-03-2020
-Hoe kan ik ervoor zorgen dat ik op Genre kan filteren?
-In opdracht twee heb ik de films een class geven en zo in css op display none kunnen zetten.
-Maar nu weet ik niet hoe ik onderscheid kan maken tussen de films en hun genres.
-
-## Vraag 03-04-2020
-Kleine vraag. Wanneer je de browser resized, dan heb ik het aantal kolommen vast gezet, omdat het er lelijk uit zoe zien als je 4 kolommen hebt op een heel smal scherm. Ik heb de radio buttons disabled en je kan er niet meer op klikken, maar de radio buttons zijn nog steeds veranderbaar met het toetsenbord. Hoe kan ik dit ook uitschakelen?
-
 # Procesverslag
 
 Voor deze opdracht ga je een functionaliteit ontwerpen met externe data. De data is JSON die met een REST API van een externe bron wordt ingeladen met Javascript. Als de data geladen is moeten gebruikers je ontwerp op verschillende manieren kunnen bedienen. Verschillende states zijn vormgeven en worden op het juiste moment getoond.
@@ -44,3 +32,9 @@ Hij werkt nog niet optimaal, hij pakt op dit moment alleen nog de eerste genre (
 
 Als laatst heb ik een info icon toegevoegd, wanneer je hier met je muis over heen hovered dan krijg je een blok tekst te zien met de hotkeys die gebruikt kunnen worden.
 ![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht3/img/Readme/Versie3.4.png "Versie 3.4")
+
+## Versie 4
+In deze versie heb ik ten eerste toegevoegd dat het aantal kolommen fixed zijn als de breedte van het scherm een bepaald punt bereikt. Dit heb ik erin gedaan zodat het niet mogelijk is om 4 kolommen te hebben op een heel smal scherm.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht3/img/Readme/Versie4.1.png "Versie 4.1")
+
+Daarnaast zijn de filters, met behulp van Sanne, nu helemaal werkend gemaakt. Ook heb ik een kleine easter egg toegevoegd, niks speciaals, maar waarom niet.

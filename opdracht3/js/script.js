@@ -4,7 +4,6 @@
 
 /*eslint 'no-console': 0*/
 const section = document.querySelector("section");
-var button = document.querySelector("button");
 
 /* Doen als de pagina geladen is */
 window.onload = function () {
@@ -21,7 +20,9 @@ window.onload = function () {
         showMovies(movies);
     }
 
+    updateKolomButtons();
 };
+
 
 function showMovies(jsonObj) {
     const movie = jsonObj;
@@ -166,25 +167,33 @@ document.body.addEventListener('keydown', function (event) {
     } else if (event.keyCode == 50) {
         document.body.setAttribute("data-columns", "twee");
         var input2 = document.querySelector("#twee");
-        input2.checked = true;
+        if (!input2.disabled) {
+            input2.checked = true;
+        }
     } else if (event.keyCode == 51) {
         document.body.setAttribute("data-columns", "drie");
         var input3 = document.querySelector("#drie");
-        input3.checked = true;
+        if (!input3.disabled) {
+            input3.checked = true;
+        }
     } else if (event.keyCode == 52) {
         document.body.setAttribute("data-columns", "vier");
         var input4 = document.querySelector("#vier");
-        input4.checked = true;
+        if (!input4.disabled) {
+            input4.checked = true;
+        }
     }
-
-
 });
+
 
 /* On resize of window, you can't change the amount of columns */
 var w = window.innerWidth;
 
 window.addEventListener('resize', function (event) {
+    updateKolomButtons();
+});
 
+function updateKolomButtons() {
     var inputTwo = document.querySelector("#twee");
     var inputThree = document.querySelector("#drie");
     var inputFour = document.querySelector("#vier");
@@ -198,4 +207,4 @@ window.addEventListener('resize', function (event) {
         inputThree.disabled = false;
         inputFour.disabled = false;
     };
-});
+}
