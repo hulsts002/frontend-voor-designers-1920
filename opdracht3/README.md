@@ -35,6 +35,10 @@ Als laatst heb ik een info icon toegevoegd, wanneer je hier met je muis over hee
 
 ## Versie 4
 In deze versie heb ik ten eerste toegevoegd dat het aantal kolommen fixed zijn als de breedte van het scherm een bepaald punt bereikt. Dit heb ik erin gedaan zodat het niet mogelijk is om 4 kolommen te hebben op een heel smal scherm.
-![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht3/img/Readme/Versie4.1.png "Versie 4.1")
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht3/img/Readme/Versie4.1.png "Versie 4")
 
 Daarnaast zijn de filters, met behulp van Sanne, nu helemaal werkend gemaakt. Ook heb ik een kleine easter egg toegevoegd, niks speciaals, maar waarom niet.
+
+## Versie 5
+Als laatst heb ik nog een Loading State toegevoegd, die aan het begin van het openen van de site te zien is.
+![alt text](https://github.com/hulsts002/frontend-voor-designers-1920/blob/master/opdracht3/img/Readme/Versie5.1.png "Versie 5")

@@ -15,10 +15,16 @@ window.onload = function () {
     request.send();
 
     /* Doen als de server geantwoord heeft */
-    request.onload = function () {
+    //    request.onload = function () {
+    //        const movies = request.response;
+    //        showMovies(movies);
+    //    }
+
+    /* Doen na loader klaar is */
+    setTimeout(function () {
         const movies = request.response;
         showMovies(movies);
-    }
+    }, 2400)
 
     updateKolomButtons();
 };
@@ -207,4 +213,15 @@ function updateKolomButtons() {
         inputThree.disabled = false;
         inputFour.disabled = false;
     };
+}
+
+
+var loader = document.querySelector(".overlay");
+
+var myVar = setTimeout(myTimer, 2400);
+
+function myTimer() {
+    loader.classList.add("hide");
+    console.log('test');
+
 }
