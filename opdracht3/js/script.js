@@ -215,13 +215,13 @@ function updateKolomButtons() {
     };
 }
 
-
+/* Loader, remove loader after 2.4s */
 var loader = document.querySelector(".overlay");
 
 var myVar = setTimeout(myTimer, 2400);
 
 function myTimer() {
-    loader.classList.add("hide");
+    loader.parentNode.removeChild(loader);
     console.log('test');
 
 }
