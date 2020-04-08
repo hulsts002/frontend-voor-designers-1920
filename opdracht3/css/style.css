@@ -451,7 +451,7 @@ article img {
     background:  #eef0f6;
     width: 90%;
     height: 100%;
-    transition: opacity 0.6s ease-out;
+    transition: opacity 0.4s ease-out;
 }
 
 /* loader from https://loading.io/css/ */
